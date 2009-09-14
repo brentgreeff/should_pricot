@@ -1,16 +1,19 @@
 module ShouldPricot
   
-  def element(selector)
-    ElementAssertion.new(selector, html, self)
+  def element(selector, passed_html = nil)
+    @passed_html = passed_html
+    ElementAssertion.new(selector, get_html, self)
   end
   
-  def count(selector)
-    CountAssertion.new(selector, html, self)
+  def count(selector, passed_html = nil)
+    @passed_html = passed_html
+    CountAssertion.new(selector, get_html, self)
   end
   
   private
   
-  def html
+  def get_html
+    return @passed_html if @passed_html
     @html || @html = Hpricot(@response.body)
   end
   

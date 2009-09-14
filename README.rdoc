@@ -23,6 +23,10 @@ Designed for use with ActiveSupport::TestCase (Test/Unit)
       
       count('ol#girlfriends li').should_be 6
 
+* You can also pass in html
+      
+      element("div.wicked", some_html).should_be_present
+
 
 Please refer to the Hpricot library for more examples
 of the kind of selectors available.
