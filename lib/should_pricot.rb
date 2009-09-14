@@ -13,7 +13,7 @@ module ShouldPricot
   private
   
   def get_html
-    return @passed_html if @passed_html
+    return Hpricot(@passed_html) if @passed_html
     @html || @html = Hpricot(@response.body)
   end
   
