@@ -23,6 +23,10 @@ Designed for use with ActiveSupport::TestCase (Test/Unit)
       
       count('ol#girlfriends li').should_be 6
 
+* You can also pass a regex
+
+      element("div.wicked").should_be /fuzzy match this/
+
 * You can also pass in html
       
       element("div.wicked", some_html).should_be_present
@@ -30,5 +34,8 @@ Designed for use with ActiveSupport::TestCase (Test/Unit)
 
 Please refer to the Hpricot library for more examples
 of the kind of selectors available.
+
+Mad props to Kid80 for the regex matching patch.
+
 
 Copyright (c) 2009 [Brent Greeff], released under the MIT license

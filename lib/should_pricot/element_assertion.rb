@@ -8,7 +8,12 @@ module ShouldPricot
     
     def should_be(expected)
       should_be_present
-      assert_equal expected, @element.inner_html.strip
+      
+      if expected.is_a? Regexp
+        assert_match expected, @element.inner_html.strip
+      else
+        assert_equal expected, @element.inner_html.strip
+      end
     end
     
     def should_be_present
