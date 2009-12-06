@@ -16,6 +16,10 @@ module ShouldPricot
       end
     end
     
+    def should_contain(expected)
+      assert_match expected, @element.inner_html.strip
+    end
+    
     def should_be_present
       assert @element.is_a?(Hpricot::Elem), "element : '#{@selector}' is missing"
     end

@@ -25,7 +25,11 @@ Designed for use with ActiveSupport::TestCase (Test/Unit)
 
 * You can also pass a regex
 
-      element("div.wicked").should_be /fuzzy match this/
+      element("div.wicked").should_be /containg this/
+
+* Even better
+
+      element('.date').should_contain "today"
 
 * You can also pass in html
       
