@@ -17,6 +17,8 @@ module ShouldPricot
     end
     
     def should_contain(expected)
+      should_be_present
+      
       assert_match expected, @element.inner_html.strip
     end
     
