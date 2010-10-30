@@ -1,20 +1,8 @@
-module ShouldPricot
-  
-  def element(selector, passed_html = nil)
-    @passed_html = passed_html
-    ElementAssertion.new(selector, get_html, self)
-  end
-  
-  def count(selector, passed_html = nil)
-    @passed_html = passed_html
-    CountAssertion.new(selector, get_html, self)
-  end
-  
-  private
-  
-  def get_html
-    return Hpricot(@passed_html) if @passed_html
-    @html || @html = Hpricot(@response.body)
-  end
-  
-end
+require 'test_help'
+require 'hpricot'
+
+require File.join(File.dirname(__FILE__), "lib", "should_pricot", "count_assertion")
+require File.join(File.dirname(__FILE__), "lib", "should_pricot", "element_assertion")
+require File.join(File.dirname(__FILE__), "lib", "should_pricot", "test_helper_methods")
+
+ActiveSupport::TestCase.send(:include, ShouldPricot::TestHelperMethods)
