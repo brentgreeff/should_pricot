@@ -45,6 +45,13 @@ Designed for use with ActiveSupport::TestCase (Test/Unit)
 Please refer to the Hpricot library for more examples
 of the kind of selectors available.
 
+
+== Funktional
+
+Designed to be used with the funktional testing library which provides
+contexts and class level assertions on top of Test:Unit.
+
+
 Mad props to Kid80 for the regex matching patch.
 
 
