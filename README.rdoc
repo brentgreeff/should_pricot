@@ -5,6 +5,12 @@ using the wicked Hpricot CSS / XPath selectors.
 Requires Hpricot.
 Designed for use with ActiveSupport::TestCase (Test/Unit)
 
+== Install
+
+      gem install should_pricot
+      
+      (or use bundler)
+
 == Example
 
 * I want to test something appears on the page:
