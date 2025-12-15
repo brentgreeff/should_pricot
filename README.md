@@ -1,7 +1,7 @@
-> [!CAUTION]
+> [\!CAUTION]
 > This repository is deprecated and no longer maintained.
 
-= ShouldPricot
+# ShouldPricot
 
 Test the html in your functional tests using the wicked Hpricot CSS / XPath
 selectors. Requires Hpricot. Designed for use with ActiveSupport::TestCase
